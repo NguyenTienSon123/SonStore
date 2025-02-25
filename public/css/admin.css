@@ -1,0 +1,211 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --main_blue--color:  #a5cdfa;
+    --main_orange--color: #ed6d4d;
+    --main_blue-weight--color: #263462;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+#header--logo img{
+    width: 100%;
+}
+
+main{
+    position: relative;
+    display: flex;
+    font-family: sans-serif;
+}
+
+#content {
+    margin: 3% 3% 3% 12%;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main_blue--color);
+    color: var(--text-color);
+    padding: 30px;
+}
+
+#navbar ul li{
+    list-style: none;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#navbar li a{
+    color: var(--text-color);
+    font-family:sans-serif;
+    text-decoration: none;
+}
+
+#navbar li i{
+    margin-right: 10px;
+}
+
+#mat-hang-container img {
+    width: 50px;
+    height: 50px;
+}
+
+#nha-cung-cap-container,
+#mat-hang-container,
+#loai-mat-hang-container{
+    display: flex;
+}
+
+#nha-cung-cap-container .controll-supplier,
+#mat-hang-container .controll-product,
+#loai-mat-hang-container .controll-category {
+    flex: 10%;
+    margin: 16px;
+}
+
+#nha-cung-cap-container .controll-supplier h2,
+#mat-hang-container .controll-product h2,
+#loai-mat-hang-container .controll-category h2{
+    margin-bottom: 20px;
+}
+
+#nha-cung-cap-container .controll-supplier form,
+#mat-hang-container .controll-product form,
+#loai-mat-hang-container .controll-category form{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--main_blue--color);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#nha-cung-cap-form input,
+#nha-cung-cap-form button,
+#mat-hang-form button,
+#mat-hang-form input,
+#mat-hang-form select,
+#mat-hang-form textarea,
+#loai-mat-hang-form button,
+#loai-mat-hang-form input{
+    width: 200px;
+    padding: 8px 15px;
+    border: 1px solid var(--main_blue--color);
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#nha-cung-cap-container .component-container,
+#mat-hang-container .component-container,
+#loai-mat-hang-container .component-container {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    border-radius: 8px;
+}
+
+#nha-cung-cap-container table,
+#mat-hang-container table,
+#loai-mat-hang-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#nha-cung-cap-container th, td,
+#mat-hang-container th, td,
+#loai-mat-hang-container th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#nha-cung-cap-container th, 
+#mat-hang-container th, 
+#loai-mat-hang-container th {
+    background: #f4f4f4;
+}
+
+#nha-cung-cap-container .edit-btn, .delete-btn,
+#mat-hang-container .edit-btn, .delete-btn,
+#loai-mat-hang-container .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#nha-cung-cap-container .edit-btn,
+#mat-hang-container .edit-btn,
+#loai-mat-hang-container .edit-btn {
+    background: blue;
+    color: white;
+}
+
+#nha-cung-cap-container .delete-btn,
+#mat-hang-container .delete-btn,
+#loai-mat-hang-container .delete-btn {
+    background: red;
+    color: white;
+} 
+
+
+
+/* mat hang css */
+/* 
+.component-container {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: blue;
+    color: white;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+} */
