@@ -1,44 +1,46 @@
-
-<div class="container">
-    <h2 class="mb-4">Quản Lý Nhập Hàng</h2>
-
-    <!-- Form nhập hàng -->
-    <form id="nhapHangForm">
-        <div class="mb-3">
-            <label for="nhaCungCap" class="form-label">Nhà Cung Cấp</label>
-            <select class="form-control" id="nhaCungCap" name="nhaCungCap" required>
-                <option value="">-- Chọn Nhà Cung Cấp --</option>
+<div id="nhap-hang-container" class="component-container">
+    <div class="controll-import">
+        <h2>Quản lý Nhập Hàng</h2>
+        <form id="nhap-hang-form" action="" method="POST">
+            <select name="mat_hang_id" id="mat_hang_id" required>
+                <option value="">--Chọn mặt hàng--</option>
             </select>
-        </div>
+            <select name="nha_cung_cap_id" id="nha_cung_cap_id" required>
+                <option value="">--Chọn nhà cung cấp--</option>
+            </select>
+            <input type="text" name="so_luong" id="so_luong" placeholder="Nhập số lượng" required />
+            <input type="text" name="gia_nhap" id="gia_nhap" placeholder="Nhập giá nhập về" required />
+            <select name="trang_thai" id="trang_thai" required>
+                <option value="">--Trạng thái--</option>
+            </select>
+            <button type="submit">Tạo phiếu nhập</button>
+        </form>
+    </div>
 
-        <div class="mb-3">
-            <label for="ngayNhap" class="form-label">Ngày Nhập</label>
-            <input type="date" class="form-control" id="ngayNhap" name="ngayNhap" required>
-        </div>
-
-        <h4>Danh Sách Sản Phẩm</h4>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Sản Phẩm</th>
-                    <th>Số Lượng</th>
-                    <th>Giá Nhập</th>
-                    <th>Thành Tiền</th>
-                    <th>Hành Động</th>
-                </tr>
-            </thead>
-            <tbody id="productList">
-                <!-- Danh sách sản phẩm nhập hàng -->
-            </tbody>
-        </table>
-
-        <button type="button" class="btn btn-primary">Thêm Sản Phẩm</button>
-
-        <div class="mt-3">
-            <strong>Tổng Giá Trị Nhập: </strong>
-            <span id="tongGiaTriNhap">0</span> VNĐ
-        </div>
-
-        <button type="submit" class="btn btn-success mt-3">Lưu Phiếu Nhập</button>
-    </form>
+    <table id="nhap-hang-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Mặt hàng</th>
+                <th>Tên Nhà Cung Cấp</th>
+                <th>Địa Chỉ</th>
+                <th>Số Điện Thoại</th>
+                <th>Email</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{$nhacungcap->MaNhaCungCap }}</td>
+                <td>$nhacungcap->TenNhaCungCap }}</td>
+                <td>$nhacungcap->DiaChi }}</td>
+                <td>$nhacungcap->SoDienThoai }}</td>
+                <td> $nhacungcap->Email }}</td>
+                <td>
+                    <button class="edit-btn">Sửa</button>
+                    <button class="delete-btn">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

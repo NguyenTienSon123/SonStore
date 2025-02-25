@@ -10,5 +10,11 @@ class NhaCungCap extends Model
     protected $table = 'nhacungcap';
     protected $primaryKey = 'MaNhaCungCap';
     public $timestamps = false;
-    protected $fillable = ['TenNhaCungCap', 'DiaChi', 'SoDienThoai', 'Email'];
+
+    protected $fillable = [
+        'TenNhaCungCap',
+        'DiaChi',
+        'SoDienThoai',
+        'Email'
+    ];
 }

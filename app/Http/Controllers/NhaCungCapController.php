@@ -18,24 +18,21 @@ class NhaCungCapController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'ten' => 'required|string|unique:nhacungcap,TenNhaCungCap|max:255',
+            'ten' => 'required|string|max:255',
             'dia_chi' => 'required|string|max:255',
             'so_dien_thoai' => 'required|string|max:20',
-            'email' => 'required|email|unique:nhacungcap,Email'
+            'email' => 'required|email|unique:nhacungcap,Email',
         ]);
 
-        // Tạo nhà cung cấp mới
         $nhaCungCap = NhaCungCap::create([
             'TenNhaCungCap' => $request->ten,
             'DiaChi' => $request->dia_chi,
             'SoDienThoai' => $request->so_dien_thoai,
-            'Email' => $request->email
+            'Email' => $request->email,
         ]);
 
-        // Trả về JSON
         return response()->json([
-            'success' => true,
-            'message' => 'Thêm nhà cung cấp thành công!',
+            'message' => 'Nhà cung cấp đã được thêm thành công!',
             'data' => $nhaCungCap
         ], 201);
     }

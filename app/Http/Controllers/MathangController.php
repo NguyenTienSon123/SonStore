@@ -34,7 +34,6 @@ class MatHangController extends Controller
             'gia' => 'required|numeric|min:0',
             'mo_ta' => 'nullable|string',
             'loai_mat_hang_id' => 'required|integer|exists:loaimathang,MaLoaiMatHang',
-            'trang_thai' => 'required|integer|in:0,1,2',
             'hinh_anh' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
@@ -49,7 +48,7 @@ class MatHangController extends Controller
             'TenMatHang' => $request->ten,
             'MaLoaiMatHang' => $request->loai_mat_hang_id,
             'Gia' => $request->gia,
-            'TrangThai' => $request->trang_thai,
+            'TrangThai' => 0,
             'MoTa' => $request->mo_ta,
             'ngay_them' => now(),
             'Anh' => $imagePath

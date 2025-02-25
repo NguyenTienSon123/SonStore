@@ -11,11 +11,6 @@
                 @endforeach
             </select>
             <input type="number" name="gia" id="gia" placeholder="Nhập giá" required />
-            <select name="trang_thai" id="trang_thai">
-                <option value="">--Trang thái--</option>
-                <option value="1">Còn hàng</option>
-                <option value="0">Hết hàng</option>
-            </select>
             <textarea name="mo_ta" id="mo_ta" placeholder="Nhập mô tả"></textarea>
             <input type="file" name="hinh_anh" id="hinh_anh" required />
             <button type="submit">Thêm mới</button>
@@ -33,6 +28,7 @@
                 <th>Giá</th>
                 <th>Trạng thái</th>
                 <th>Mô tả</th>
+                <th>Số lượng</th>
                 <th>Ngày thêm</th>
                 <th>Hành Động</th>
             </tr>
@@ -47,6 +43,7 @@
                 <td>{{ $hang->Gia }}</td>
                 <td>{{ $hang->TrangThai }}</td>
                 <td>{{ $hang->MoTa }}</td>
+                <td>{{ $hang->SoLuongTon }}</td>
                 <td>{{ $hang->ngay_them }}</td>
                 <td>
                     <button class="edit-btn">Sửa</button>

@@ -10,7 +10,7 @@ class MatHang extends Model
     protected $table = 'mathang';
     protected $primaryKey = 'MaMatHang';
     public $timestamps = false;
-    protected $fillable = ['TenMatHang', 'MaLoaiMatHang', 'Gia', 'TrangThai', 'MoTa', 'Anh'];
+    protected $fillable = ['TenMatHang', 'MaLoaiMatHang', 'Gia', 'TrangThai', 'MoTa', 'Anh', 'ngay_them', 'SoLuongTon'];
     public function loaiMatHang()
     {
         return $this->belongsTo(LoaiMatHang::class, 'MaLoaiMatHang');
